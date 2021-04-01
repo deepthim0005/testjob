@@ -1,5 +1,6 @@
 #include <stdio.h>
 main()
 {
-rev();
+	big3();
+	rev();
 }
