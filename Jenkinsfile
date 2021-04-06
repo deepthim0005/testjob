@@ -6,7 +6,6 @@ pipeline {
         stage('Build') {
 	//	agent {label 'n1'}
             steps {
-			
 				parallel{
 					a: {sh '''
 						echo "check"
@@ -21,14 +20,15 @@ pipeline {
 						}						
 						
 						}
-        }
+						}
+					}
 		stage('checking') {
 		//agent {label 'master'}
 		steps {
 		echo "test check"
-		}
-		}
+			}
 		
-    }
-    }
+		
+		}
+}
 }
