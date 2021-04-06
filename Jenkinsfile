@@ -6,7 +6,7 @@ pipeline {
         stage('Build') {
 	//	agent {label 'n1'}
             steps {
-				parallel{
+				parallel(
 					a: {sh '''
 						echo "check"
 						make
@@ -19,7 +19,7 @@ pipeline {
 					echo "test c parallel"
 						}						
 						
-						}
+						)
 						}
 					}
 		stage('checking') {
