@@ -1,6 +1,7 @@
 pipeline {
     agent none
     stages {
+	stage('Parallel run'){
 	parallel{
         stage('Build, check stage 1') {
 										agent {label 'n1'}
@@ -28,5 +29,6 @@ pipeline {
 		
 								}
 			}
+		}
 		}
 }
