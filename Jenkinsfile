@@ -1,15 +1,26 @@
 pipeline {
-	agent {label 'master'}
+    agent {label 'master'}
 
     stages {
+	
         stage('Build') {
 	//	agent {label 'n1'}
             steps {
-                sh '''
-		echo "check"
-		make
-		'''
-            }
+			
+				parallel{
+					a: {sh '''
+						echo "check"
+						make
+						'''
+						},
+					b: {
+					echo "test b parallel"
+						},
+					c: {
+					echo "test c parallel"
+						}						
+						
+						}
         }
 		stage('checking') {
 		//agent {label 'master'}
