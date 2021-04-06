@@ -23,9 +23,9 @@ pipeline {
 								steps {
 										echo "test check 1 in stage 3"
 										}
-								steps {
+								/*steps {
 										echo "test check 2 in stage 3"
-									}
+									}*/
 		
 								} 
 			}
