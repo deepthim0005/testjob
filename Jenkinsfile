@@ -1,9 +1,9 @@
 pipeline {
-    agent none
+    agent label 'master'
 
     stages {
         stage('Build') {
-		agent {label 'n1'}
+	//	agent {label 'n1'}
             steps {
                 sh '''
 		echo "check"
@@ -12,7 +12,7 @@ pipeline {
             }
         }
 		stage('checking') {
-		agent {label 'master'}
+		//agent {label 'master'}
 		steps {
 		echo "test check"
 		}
