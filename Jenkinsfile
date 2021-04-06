@@ -1,8 +1,9 @@
 pipeline {
-    agent any
+    agent none
 
     stages {
         stage('Build') {
+		agent {label 'n1'}
             steps {
                 sh '''
 		echo "check"
@@ -10,6 +11,12 @@ pipeline {
 		'''
             }
         }
+		stage('checking') {
+		agent {label 'master'}
+		steps {
+		echo "test check"
+		}
+		}
 		
     }
 }
