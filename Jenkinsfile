@@ -18,7 +18,7 @@ pipeline {
 										echo "test check in stage2"
 									}
 								}
-		/*stage(' check stage 3') {
+		stage(' check stage 3') {
 								agent {label 'master'}
 								steps {
 										echo "test check 1 in stage 3"
@@ -27,7 +27,7 @@ pipeline {
 										echo "test check 2 in stage 3"
 									}
 		
-								} */
+								} 
 			}
 		}
 		}
